@@ -1,0 +1,48 @@
+<meta charset="UTF-8">
+<script src="https://unpkg.com/vue"></script>
+
+<div id="app">
+	<ul>
+		<li v-for="(cor, i) in cores" :key="cor">
+			{{ i }} - {{ cor }}
+		</li>
+		<!--
+			Usar key é importante para templates complexos pois ajuda na renderização
+		-->
+	</ul>
+	<button @click="cores.push('branca')">Adicionar</button>
+	<hr>
+	<template v-for="(cor, i) in cores">
+		<h1> {{ cor }} </h1>
+		<p> {{ i }} </p>
+	</template>
+	<hr>
+	<ul>
+		<li v-for="pessoa in pessoas">
+			<div v-for="(valor, chave, indice) in pessoa">
+				{{ indice }} - {{ chave }} - {{ valor }}
+			</div>
+		</li>
+	</ul>
+	<hr>
+	<span v-for="n in 10">
+		{{ n }}
+	</span>
+</div>
+
+<!--
+	O template não aparece no html, ele só é usado para fazer uma função sem ter que aparecer algum elemento, como uma div
+-->
+
+<script>
+	new Vue({
+		el: '#app',
+		data: {
+			cores: ['vermelho', 'verde', 'amarelo', 'azul'],
+			pessoas: [
+				{ nome: 'Ana', idade: 26, peso: 59},
+				{ nome: 'Guilherme', idade: 22, peso: 79},
+			]
+		}
+	});
+</script>
