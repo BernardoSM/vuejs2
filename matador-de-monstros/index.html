@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="styles.css">
+<script src="https://unpkg.com/vue"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<div id="desafio">
+	<div class="container">
+		<div class="jogadores">
+			<div class="jogador">
+				<h3>Jogador</h3>
+				<div class="vida"> {{ vidaJogador }}% </div>
+			</div>
+			<div class="jogador">
+				<h3>Monstro</h3>
+				<div class="vida">  {{ vidaMonstro }}% </div>
+			</div>
+		</div>
+		<div class="ataques">
+			<button class="btn green">Ataque</button>
+			<button class="btn warning">Ataque especial</button>
+			<button class="btn green">Cura</button>
+			<button class="btn grey">Desistir</button>
+		</div>
+		<div class="log">
+			<div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="app.js"></script>

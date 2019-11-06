@@ -1,0 +1,43 @@
+.jogadores {
+	display: flex;
+	justify-content: space-between;
+}
+
+.jogador {
+	width: 400px;
+	height: 200px;
+	text-align: center;
+	padding-top: 100px;
+}
+
+.vida {
+	background: #27ae60;
+	color: white;
+	font-weight: bold;
+	height: 25px;
+	font-size: 18px;
+}
+
+.ataques {
+	display: flex;
+	justify-content: space-around;
+	padding-top: 50px;
+}
+
+button.green {
+	background: #27ae60;
+	padding: 10px 75px;
+	color: #fff;
+}
+
+button.warning {
+	background: #d35400;
+	padding: 10px 75px;
+	color: #fff;
+}
+
+button.grey {
+	background: grey;
+	padding: 10px 75px;
+	color: #fff;
+}

@@ -9,15 +9,17 @@
     <button @click="aparece = !aparece">Alternar</button>
     <div v-if="aparece">
       <p>Você quer me ver ...</p>
-      <p>...ou eu</p>
     </div>
     <div v-else>
-      
+      <p>...ou eu</p>
     </div>
     <div v-show="aparece">
       <p>Você quer me ver ...</p>
+    </div>
+    <div v-show="!aparece">
       <p>...ou eu</p>
     </div>
+    
   </div>
 
   <!-- 2) Exiba em uma <ul> um array de elementos da sua escolha.
