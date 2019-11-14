@@ -7,22 +7,27 @@
 		<div class="jogadores">
 			<div class="jogador">
 				<h3>Jogador</h3>
-				<div class="vida"> {{ vidaJogador }}% </div>
+				<div class="vida" :style="{'width': vidaJogador+'%'}" :class="{morrendo: vidaJogador < 30, reset: vidaJogador <= 0}"> {{ vidaJogador <= 0 ? 'Faleceu' : vidaJogador+'%' }}  </div>
 			</div>
 			<div class="jogador">
 				<h3>Monstro</h3>
-				<div class="vida">  {{ vidaMonstro }}% </div>
+				<div class="vida" :class="{morrendo: vidaMonstro < 30}" :style="{'width': vidaMonstro+'%'}">  {{ vidaMonstro }}% </div>
 			</div>
 		</div>
 		<div class="ataques">
-			<button class="btn green">Ataque</button>
-			<button class="btn warning">Ataque especial</button>
-			<button class="btn green">Cura</button>
-			<button class="btn grey">Desistir</button>
+			<button class="btn green" @click="ataque()">Ataque</button>
+			<button class="btn warning" @click="ataqueEspecial()">Ataque especial</button>
+			<button class="btn green" @click="cura()">Cura</button>
+			<button class="btn grey" @click="desistir()">Desistir</button>
 		</div>
-		<div class="log">
-			<div>
-				
+		<div class="log" v-if="logs.length">
+			<div class="row" v-for="log in logs">
+				<div class="col-md-6">
+					{{ log.textJogador }}
+				</div>
+				<div class="col-md-6">
+					{{ log.textMonstro }}
+				</div>
 			</div>
 		</div>
 	</div>

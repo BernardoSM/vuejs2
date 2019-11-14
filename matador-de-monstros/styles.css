@@ -16,6 +16,16 @@
 	font-weight: bold;
 	height: 25px;
 	font-size: 18px;
+	width: 100%;
+}
+
+.vida.morrendo {
+	background: red;
+}
+
+.vida.reset {
+	background: grey;
+	width: 100%;
 }
 
 .ataques {
