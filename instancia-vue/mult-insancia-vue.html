@@ -1,0 +1,38 @@
+<script src="https://unpkg.com/vue"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<div id="app1">
+	{{ titulo1 }}
+	<button @click="alterar"></button>
+</div>
+
+<div id="app2">
+	{{ titulo2 }}
+	<button @click="alterar"></button>
+</div>
+
+<script>
+	new Vue({
+		el: '#app1',
+		data: {
+			titulo1: 'Teste 1'
+		},
+		methods: {
+			alterar() {
+				this.titulo1 += '!!!!'
+			}
+		}
+	})
+
+	new Vue({
+		el: '#app2',
+		data: {
+			titulo2: 'Teste 2'
+		},
+		methods: {
+			alterar() {
+				this.titulo2 += '!!!!'
+			}
+		}
+	})
+</script>
