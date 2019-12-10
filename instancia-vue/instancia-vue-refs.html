@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<script src="https://unpkg.com/vue"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<div id="app">
+	<h2 ref="aulaRef">{{ aula }}</h2>
+	<h3>{{ modulo }}</h3>
+	<button @click="alterarAula">Alterar</button>
+	<button @click="alterarModulo">Alterar</button>
+</div>
+
+<script>
+	const vm = new Vue({
+		el: '#app',
+		data: {
+			aula: 'Aula: Usando Refs',
+			modulo: 'Modulo: Instancia vue refs'
+		},
+		methods: {
+			alterarAula() {
+				this.aula += '#'
+			},
+			alterarModulo() {
+				this.modulo += '#'
+				console.log(this.$refs.aulaRef.innerText)
+			}
+		}
+	})
+
+	vm.$refs.aulaRef.innerText = 'Alterado diretamente :('
+</script>
