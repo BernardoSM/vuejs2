@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <hello-world v-for="c in 5" :key="c"/>
+    <app-contador></app-contador>
   </div>
+
 </template>
 
 <script>
+//Registrando de forma local, esse componente app.vue está chamando outro componente
 import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    'hello-world': HelloWorld
   }
 }
 </script>
