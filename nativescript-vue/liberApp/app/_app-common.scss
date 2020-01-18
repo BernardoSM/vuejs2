@@ -1,0 +1,119 @@
+@import "~@nativescript/theme/core";
+@import "~@nativescript/theme/blue";
+@import "~@/fonts/_font.scss";
+
+// Place any CSS rules you want to apply on both iOS and Android here.
+// This is where the vast majority of your CSS code goes.
+
+// Font icon class
+.fab {
+    font-family: "Font Awesome 5 Brands", "fa-brands-400";
+    font-weight: 400;
+}
+
+.fas {
+    font-family: "Font Awesome 5 Free", "fa-solid-900";
+    font-weight: 900;
+}
+
+.far {
+    font-family: "Font Awesome 5 Free", "fa-regular-400";
+    font-weight: 400;
+}
+
+// Custom tabstrip item class
+.navigation__item {
+    &:active,
+    &:active Label {
+        @include colorize($color: complementary);
+    }
+}
+
+// Common page class
+.page__content {
+    &-icon,
+    &-placeholder {
+        color: const(grey);
+        font-size: 20;
+        vertical-align: center;
+        horizontal-align: center;
+    }
+
+    &-icon {
+        font-size: 72;
+        vertical-align: top;
+        margin-top: 20%;
+    }
+}
+
+// Padrões
+ActionBar {
+    background: #222D5F;
+    box-shadow: none;
+    border: none;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+    &.home {
+
+        .home__stack {
+            min-width: 300px;
+        }
+
+        .home__image {
+            width: 270px;
+            height: auto;
+            vertical-align: center;
+        }
+
+        .home__icon {
+            font-size: 20px;
+        }
+
+        .home__welcome {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+            color: #ffffff;
+        }
+
+        .home__username {
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        .home__wallet {
+            background: #ffffff;
+            margin-bottom: 40px;
+            border-radius: 30px;
+
+            .far {
+                background: #222D5F;
+                border-radius: 100px;
+                text-align: center;
+                font-size: 30px;
+                margin: 16px;
+                padding-top: 36px;
+                padding-left: 24px;
+            }
+
+            .text {
+                color: black;
+                padding-left: 20px;
+            }
+
+            .value {
+                color: black;
+                font-size: 24px;
+                font-weight: bold;
+                margin: 0;
+                padding: 0;
+                padding-left: 20px;
+            }
+        }
+    }
+}
+
+
